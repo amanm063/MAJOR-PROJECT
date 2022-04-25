@@ -225,27 +225,27 @@
 .btn.action-red:hover {
   background-color: #c72113;
 }
-.btn.action-facebook {
+/* .btn.action-facebook {
   background-color: #2e4da7;
   color: #ffffff;
 }
 .btn.action-facebook:hover {
   background-color: #3e62ca;
-}
-.btn.action-twitter {
+} */
+.btn.action-linkedin {
   background-color: #0aa0f5;
   color: #ffffff;
 }
-.btn.action-twitter:hover {
+.btn.action-linkedin:hover {
   background-color: #0880c4;
 }
-.btn.action-dribbble {
+/* .btn.action-dribbble {
   background-color: #e93a49;
   color: #ffffff;
 }
 .btn.action-dribbble:hover {
   background-color: #d60012;
-}
+} */
 .btn.border-main {
   border: 2px solid #011627;
 }
@@ -12355,14 +12355,14 @@ input[type=radio] + label:before {
   color: #c72113;
 }
 
-.color-twitter {
+.color-linkedin {
   color: #0aa0f5;
 }
-.color-twitter.link:hover {
+.color-linkedin.link:hover {
   color: #0880c4;
 }
 
-.color-facebook {
+/* .color-facebook {
   color: #2e4da7;
 }
 .color-facebook.link:hover {
@@ -12374,7 +12374,7 @@ input[type=radio] + label:before {
 }
 .color-dribbble.link:hover {
   color: #d60012;
-}
+} */
 
 /* background-colors */
 .bg-light {
