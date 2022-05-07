@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            display: flex;
+            place-items: center;
+            justify-content: space-evenly;
+            background-color: whitesmoke;
+        }
+
+        .card {
+            display: grid;
+            grid-template-columns: 300px;
+            grid-template-rows: 300px;
+            overflow: hidden;
+            width: 300px;
+            height: 300px;
+            box-shadow: 0 0 40px rgba(0, 0, 0);
+        }
+
+        .card img {
+            width: 100%;
+            grid-area: 1 / 1 / span 1 / span 1;
+            transition: 0.3s ease-out;
+        }
+
+        .card p {
+            z-index: 111;
+            color: #fff;
+            grid-area: 1 / 1 / span 1 / span 1;
+        }
+
+        .card .text {
+            z-index: 111;
+            color: #fff;
+            grid-area: 1 / 1 / span 1 / span 1;
+        }
+
+        .text {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            place-items: center;
+            justify-content: center;
+            font-family: permanent marker;
+            font-size: 1em;
+            text-align: center;
+            transition: 0.3s ease-out;
+        }
+
+        .card:hover img {
+            transform: scale(1.2, 1.2);
+        }
+
+        .card:hover .text {
+            background-color: rgba(0, 0, 0, .5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0ODY2MDgxOQ&ixlib=rb-1.2.1&q=85">
+        <div class="text">
+            <h1>Adventure is always needed</h1>
+        </div>
+    </div>
+    <div class="card">
+        <img
+            src="https://images.unsplash.com/photo-1510797215324-95aa89f43c33?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0ODY2MDg0NA&ixlib=rb-1.2.1&q=85">
+        <div class="text">
+            <h1>The never ending journey</h1>
+        </div>
+    </div>
+    <div class="card">
+        <img
+            src="https://images.unsplash.com/photo-1473081556163-2a17de81fc97?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0ODY2MDg3NQ&ixlib=rb-1.2.1&q=85">
+        <div class="text">
+            <h1>Explore the vast beauty of nature</h1>
+        </div>
+    </div>
+</body>
+
+</html>
