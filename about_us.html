@@ -7,93 +7,269 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700&display=swap');
 
-        html {
-            height: 100%;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            height: 100%;
+            font-family: 'Poppins', sans-serif;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            place-items: center;
-            justify-content: space-evenly;
-            background-color: whitesmoke;
+            align-items: center;
+            justify-content: center;
+            background-color: #ADE5F9;
+            min-height: 100vh;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utilities */
+        .card::after,
+        .card img {
+            border-radius: 50%;
+        }
+
+        body,
+        .card,
+        .stats {
+            display: flex;
         }
 
         .card {
-            display: grid;
-            grid-template-columns: 300px;
-            grid-template-rows: 300px;
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, .5);
+            max-width: 500px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, .15);
+            margin: 1rem;
+            position: relative;
+            transform-style: preserve-3d;
             overflow: hidden;
-            width: 300px;
-            height: 300px;
-            box-shadow: 0 0 40px rgba(0, 0, 0);
+        }
+
+        .card::before,
+        .card::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+        }
+
+        .card::before {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #FFF;
+            border-radius: 10px;
+            top: -.7rem;
+            left: -.7rem;
+        }
+
+        .card::after {
+            height: 15rem;
+            width: 15rem;
+            background-color: #4172f5aa;
+            top: -8rem;
+            right: -8rem;
+            box-shadow: 2rem 6rem 0 -3rem #FFF
         }
 
         .card img {
-            width: 100%;
-            grid-area: 1 / 1 / span 1 / span 1;
-            transition: 0.3s ease-out;
+            height: 10rem;
+            width: 8rem;
+            min-width: 80px;
+            box-shadow: 0 0 0 5px #FFF;
         }
 
-        .card p {
-            z-index: 111;
-            color: #fff;
-            grid-area: 1 / 1 / span 1 / span 1;
+        .infos {
+            margin-left: 1.5rem;
         }
 
-        .card .text {
-            z-index: 111;
-            color: #fff;
-            grid-area: 1 / 1 / span 1 / span 1;
+        .name {
+            margin-bottom: 1rem;
+        }
+
+        .name h2 {
+            font-size: 1.3rem;
+        }
+
+        .name h4 {
+            font-size: .8rem;
+            color: #333
         }
 
         .text {
-            height: 100%;
-            width: 100%;
-            display: flex;
-            place-items: center;
-            justify-content: center;
-            font-size: 1em;
-            text-align: center;
-            transition: 0.3s ease-out;
+            font-size: .9rem;
+            margin-bottom: 1rem;
         }
 
-        .card:hover img {
-            transform: scale(1.2, 1.2);
+        .stats {
+            margin-bottom: 1rem;
         }
 
-        .card:hover .text {
-            background-color: rgba(0, 0, 0, .5);
+        .stats li {
+            min-width: 5rem;
+        }
+
+        .stats li h3 {
+            font-size: .99rem;
+        }
+
+        .stats li h4 {
+            font-size: .75rem;
+        }
+
+        .links button {
+            font-family: 'Poppins', sans-serif;
+            min-width: 120px;
+            padding: .5rem;
+            border: 1px solid #222;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all .25s linear;
+        }
+
+        .links .follow,
+        .links .view:hover {
+            background-color: #222;
+            color: #FFF;
+        }
+
+        .links .view,
+        .links .follow:hover {
+            background-color: transparent;
+            color: #222;
+        }
+
+        @media screen and (max-width: 450px) {
+            .card {
+                display: block;
+            }
+
+            .infos {
+                margin-left: 0;
+                margin-top: 1.5rem;
+            }
+
+            .links button {
+                min-width: 100px;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="card">
-        <img
-            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0ODY2MDgxOQ&ixlib=rb-1.2.1&q=85">
-        <div class="text">
-            <h1>Adventure is always needed</h1>
+        <div class="img">
+            <img src="i/beard.jpg">
+        </div>
+        <div class="infos">
+            <div class="name">
+                <h2>Ritik Malik</h2>
+                <h4>Front-End Developer</h4>
+            </div>
+            <p class="text">
+                Worked on HTML, CSS, Javascript, Bootstrap and Photoshop.
+            </p>
+            <!-- <ul class="stats">
+                <li>
+                    <h3>15K</h3>
+                    <h4>Views</h4>
+                </li>
+                <li>
+                    <h3>82</h3>
+                    <h4>Projects</h4>
+                </li>
+                <li>
+                    <h3>1.3M</h3>
+                    <h4>Followers</h4>
+                </li>
+            </ul> -->
+            <div class="links">
+                <button class="follow">Linkedin</button>
+                <button class="view">GitHub</button>
+            </div>
         </div>
     </div>
+
     <div class="card">
-        <img
-            src="https://images.unsplash.com/photo-1510797215324-95aa89f43c33?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0ODY2MDg0NA&ixlib=rb-1.2.1&q=85">
-        <div class="text">
-            <h1>The never ending journey</h1>
+        <div class="img">
+            <img src="i/saitama.png">
+        </div>
+        <div class="infos">
+            <div class="name">
+                <h2>Aman Malik</h2>
+                <h4>Data Scientist</h4>
+            </div>
+            <p class="text">
+                Worked on Python, Machine Learning and EDA.
+            </p>
+            <!-- <ul class="stats">
+                <li>
+                    <h3>15K</h3>
+                    <h4>Views</h4>
+                </li>
+                <li>
+                    <h3>82</h3>
+                    <h4>Projects</h4>
+                </li>
+                <li>
+                    <h3>1.3M</h3>
+                    <h4>Followers</h4>
+                </li>
+            </ul> -->
+            <div class="links">
+                <button class="follow">Linkedin</button>
+                <button class="view">GitHub</button>
+            </div>
         </div>
     </div>
+
     <div class="card">
-        <img
-            src="https://images.unsplash.com/photo-1473081556163-2a17de81fc97?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0ODY2MDg3NQ&ixlib=rb-1.2.1&q=85">
-        <div class="text">
-            <h1>Explore the vast beauty of nature</h1>
+        <div class="img">
+            <img src="i/dude.jpg">
+        </div>
+        <div class="infos">
+            <div class="name">
+                <h2>Kartik Lakra</h2>
+                <h4>Back-End Developer</h4>
+            </div>
+            <p class="text">
+                Worked on PHP and MySQL.
+            </p>
+            <!-- <ul class="stats">
+                <li>
+                    <h3>15K</h3>
+                    <h4>Views</h4>
+                </li>
+                <li>
+                    <h3>82</h3>
+                    <h4>Projects</h4>
+                </li>
+                <li>
+                    <h3>1.3M</h3>
+                    <h4>Followers</h4>
+                </li>
+            </ul> -->
+            <div class="links">
+                <button class="follow">Linkedin</button>
+                <button class="view">GitHub</button>
+            </div>
         </div>
     </div>
+
+
 </body>
 
 </html>
