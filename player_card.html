@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="icon" href="i/Logo.png" type="image/x-icon">
 
     <link
         href="https://fonts.googleapis.com/css?family=Oxygen:100,200,300,400,600,500,700,800,900|Source+Sans+Pro:100,200,300,400,500,600,700,800,900"
         rel="stylesheet">
 
-    <title>Profile Card</title>
+    <title>Player Stats</title>
     <style>
         /* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400&display=swap'); */
 
@@ -24,7 +23,7 @@
 
         body {
             background-color: black;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Oxygen', sans-serif;
             width: 100vw;
             height: 100vh;
             display: flex;
@@ -74,67 +73,73 @@
             color: whitesmoke;
         }
 
-        .card .links {
-            width: 30%;
-            display: flex;
-            justify-content: space-evenly;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
         }
 
-        .card .links i {
-            color: rgb(35, 182, 219);
-            font-size: 20px;
-            cursor: pointer;
+        ul li {
+            border: 1px solid #2D2747;
+            border-radius: 2px;
+            display: inline-block;
+            font-size: 12px;
+            margin: 0 7px 7px 0;
+            padding: 7px;
         }
 
-        .card .links i:hover {
-            color: rgb(29, 157, 189);
+        .left {
+            float: left;
+            background-color: blue;
+            height: 400px;
+            width: 450px;
+        }
+
+        .right {
+            float: right;
+            background-color: beige;
+            height: 400px;
+            width: 450px;
+        }
+
+        img {
+            /* border-radius: 10%; */
+            text-align: center;
+            background-size: cover;
+            height: 400px;
+            width: 450px;
+            /* margin: 10px; */
+            /* vertical-align: middle; */
         }
     </style>
 </head>
 
 <body>
-    <div class="card">
+    <!-- <div class="card">
         <div class="text">
             <img src="i/beard.jpg" alt="">
-            <h3>Ritik Malik</h3>
-            <p>Front-End Developer</p>
-            <p>
-                Worked on HTML, CSS, Javascript, Bootstrap and Photoshop.
-            </p>
+            <h3>Player Name</h3>
+            <p>Team Name</p>
+            <ul>
+                <li>Runs: </li>
+                <li>Strike Rate: </li>
+                <li>Six: </li>
+                <li>Four: </li>
+            </ul>
         </div>
         <div class="links">
             <a target="_blank" href="https://codepen.io/l-e-e/"><i class="fab fa-linkedin-in"></i></a>
             <a target="_blank" href="https://github.com/Leena26"><i class="fab fa-github"></i></a>
         </div>
+    </div> -->
+
+    <div class="container">
+        <div class="left">
+            <img src="i/dude.jpg" alt="Picture">
+        </div>
+        <div class="right"></div>
     </div>
-    <div class="card">
-        <div class="text">
-            <img src="i/saitama.png" alt="">
-            <h3>Aman Malik</h3>
-            <p>Data Scientist</p>
-            <p>
-                Worked on Python, Machine Learning and EDA.
-            </p>
-        </div>
-        <div class="links">
-            <a target="_blank" href="https://codepen.io/l-e-e/"><i class="fab fa-linkedin-in"></i></a>
-            <a target="_blank" href="https://github.com/Leena26"><i class="fab fa-github"></i></a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="text">
-            <img src="i/dude.jpg" alt="">
-            <h3>Kartik Lakra</h3>
-            <p>Back-End Developer</p>
-            <p>
-                Worked on PHP and MySQL.
-            </p>
-        </div>
-        <div class="links">
-            <a target="_blank" href="https://codepen.io/l-e-e/"><i class="fab fa-linkedin-in"></i></a>
-            <a target="_blank" href="https://github.com/Leena26"><i class="fab fa-github"></i></a>
-        </div>
-    </div>
+
 </body>
 
 </html>
