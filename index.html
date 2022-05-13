@@ -68,6 +68,50 @@
 			padding: 10px;
 			position: relative;
 		}
+
+		.search-box {
+			position: absolute;
+			top: 50%;
+			left: 77%;
+			display: flex;
+			align-items: center;
+			transform: translate(-50%, -50%);
+			padding: 10px;
+			border-radius: 40px;
+			height: 34px;
+			background: #2f3640;
+		}
+
+		.search-box:hover .search-txt {
+			width: 150px;
+			padding: 0 6px;
+		}
+
+		.search-box:hover .search-btn {
+			background: #fff;
+		}
+
+		.search-txt {
+			border: none;
+			background: none;
+			outline: none;
+			padding: 0;
+			color: #fff;
+			transition: 0.5s;
+			font-size: 1rem;
+			width: 0px;
+		}
+
+		.search-btn {
+			color: #1abc9c;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			transition: 0.5s;
+		}
 	</style>
 
 </head>
@@ -84,7 +128,7 @@
 					<a href="batter_card.html" class="link mr-15 color-white">BATTERS</a>
 					<a href="bowler_card.html" class="link mx-15 color-white">BOWLERS</a>
 					<a href="teams.html" class="link mx-15 color-white">TEAMS</a>
-					<a href="#" class="link mx-15 color-white">NEWS</a>
+					<a href="#" class="link mx-15 color-white">PLAYERS</a>
 					<a href="about_us.html" class="link mx-15 color-white">ABOUT US</a>
 					<!-- <a href="card.html" class="link mx-15 color-white">PLAYERS</a> -->
 					<!-- <a href="#" class="link ml-15 color-white">OTHERS</a> -->
@@ -93,6 +137,13 @@
 					<a href="login.php" class="link mr-30 color-white">Login</a>
 					<a href="signup.php" class="link mr-30 color-white">Sign Up</a>
 				</div>
+
+				<!-- <div class="search-box">
+					<input type="text" class="search-txt" name="" placeholder="Search">
+					<a href="#" class="search-btn">
+						<ion-icon name="search-outline"></ion-icon>
+					</a>
+				</div> -->
 			</div>
 		</div>
 	</nav>
@@ -348,6 +399,7 @@
 	<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </body>
 
 </html>
