@@ -1,3 +1,5 @@
+<?php include("config.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +12,20 @@
     <link
         href="https://fonts.googleapis.com/css?family=Oxygen:100,200,300,400,600,500,700,800,900|Source+Sans+Pro:100,200,300,400,500,600,700,800,900"
         rel="stylesheet">
+        <link
+		href="https://fonts.googleapis.com/css?family=Oxygen:100,200,300,400,600,500,700,800,900|Source+Sans+Pro:100,200,300,400,500,600,700,800,900"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="css/style.css" rel="stylesheet" />
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-    <title>Batter Cards</title>
+    <title>Bowler Cards</title>
 
     <style>
         *::-webkit-scrollbar {
@@ -23,7 +37,7 @@
         }
 
         *::-webkit-scrollbar-thumb {
-            background-color: #c22a16;
+            background-color: #1f87a7;
             border-radius: 10px;
             border: 2px solid #ffffff;
         }
@@ -39,7 +53,6 @@
             color: whitesmoke;
             font-family: 'Oxygen', sans-serif;
             display: flex;
-            flex-direction: row;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
@@ -73,7 +86,7 @@
         }
 
         .card-container {
-            background-color: #c22a16;
+            background-color: #1f87a7;
             border-radius: 5px;
             box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
             color: #B3B8CD;
@@ -106,7 +119,7 @@
 
 
         .skills {
-            background-color: #551212;
+            background-color: #0d3161;
             text-align: left;
             padding: 15px;
             margin-top: 30px;
@@ -144,42 +157,38 @@
 </head>
 
 <body>
+<?php include("navbar.php"); ?>
     <div class="info">
-        <h1>Batters According To Their Ratings</h1>
+        <h1>Bowlers According To Their Ratings</h1>
         <p>
             Some other information.
         </p>
     </div>
-
+    <?php 
+      
+      $i=1;
+      $get_bowler= mysqli_query($conn, "SELECT * FROM `bowler_1` ");
+      while($bowler = mysqli_fetch_array($get_bowler)){
+      $bowlername=$bowler['bowler'];
+      $id=$bowler['id'];
+      $totalrating=$bowler['total rating'];
+      
+      ?>
     <div class="card-container">
-        <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-        <h3>Virat Kohli</h3>
-        <h6>Royal Challengers Bangalore</h6>
+    <img style="width: 250px; height: 250px;" class="round" src="images/<?php echo $id; ?>.jpg" alt="user" />
+        <h3><?php echo $bowlername; ?></h3>
+        <!-- <h6>Royal Challengers Bangalore</h6> -->
         <div class="skills">
-            <h6>Player Rating: 7.2</h6>
+        <h6>Player Rating: <?php echo $totalrating; ?></h6>
             <div class="buttons">
-                <button class="primary"><a href="#">
+            <button class="primary"><a href="bowler_profile_page.php?action=bowler&bowlerid=<?php echo $id; ?>">
                         View More Stats</a>
                 </button>
             </div>
         </div>
     </div>
-
-    <div class="card-container">
-        <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-        <h3>Virat Kohli</h3>
-        <h6>RCB</h6>
-        <div class="skills">
-            <h6>Player Rating:</h6>
-            <div class="buttons">
-                <button class="primary"><a href="#">
-                        View More Stats</a>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="card-container">
+    <?php } ?>
+    <!-- <div class="card-container">
         <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
         <h3>Virat Kohli</h3>
         <h6>RCB</h6>
@@ -318,7 +327,20 @@
             </div>
         </div>
     </div>
-    
+
+    <div class="card-container">
+        <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+        <h3>Virat Kohli</h3>
+        <h6>RCB</h6>
+        <div class="skills">
+            <h6>Player Rating:</h6>
+            <div class="buttons">
+                <button class="primary"><a href="#">
+                        View More Stats</a>
+                </button>
+            </div>
+        </div>
+    </div> -->
 
 
 </body>
