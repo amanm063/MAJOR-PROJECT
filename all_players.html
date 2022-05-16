@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="i/Logo.png" type="image/x-icon">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Oxygen:100,200,300,400,600,500,700,800,900|Source+Sans+Pro:100,200,300,400,500,600,700,800,900"
+        rel="stylesheet">
+    <title>Players</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Oxygen', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #161616;
+        }
+
+        .list {
+            position: relative;
+            width: 800px;
+            min-height: 300px;
+            padding: 50px;
+            background: #2f363e;
+            box-shadow: 25px 25px 75px rgba(31, 131, 242, 0.25),
+                10px 10px 70px rgba(31, 131, 242, 0.25),
+                inset 5px 5px 10px rgba(31, 131, 242, 0.5),
+                inset 5px 5px 20px rgba(31, 131, 242, 0.2),
+                inset -5px -5px 15px rgba(31, 131, 242, 0.75);
+            border-radius: 30px;
+        }
+
+        .list h3 {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .list-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+
+        .list-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 45px;
+            height: 45px;
+            background: #1f83f2;
+            border-radius: 22.5px;
+            box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+            transition: 0.5s;
+        }
+
+        .list-item:hover::before {
+            width: 100%;
+        }
+
+        .list-item .rank {
+            position: relative;
+            min-width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .list-item .rank::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: #2f363e;
+            border-radius: 30px;
+            transform: scale(0);
+            transition: 0.5s;
+        }
+
+        .list-item:hover .rank::before {
+            transform: scale(1);
+        }
+
+        .list-item .rank span {
+            position: relative;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .list-item .name {
+            position: relative;
+            line-height: 1.15rem;
+        }
+
+        .list-item .name h4 {
+            font-weight: 600;
+            color: #bcbcc0;
+            transition: 0.5s;
+        }
+
+        .list-item .name p {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #95999d;
+            transition: 0.5s;
+        }
+
+        .list-item:hover .name h4,
+        .list-item:hover .name p {
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="list">
+            <h3>Basic Information</h3>
+            <div class="list-item">
+                <div class="rank"><span>1</span></div>
+                <div class="name">
+                    <h4>Data provided on this page is starting from the year 2008 and is till the year 2020.</h4>
+                    <!-- <p>Digital Artist</p> -->
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="rank"><span>2</span></div>
+                <div class="name">
+                    <h4>To view the stats for current year teams.</h4>
+                    <a href="teams.html">
+                        <p>Click Here</p>
+                    </a>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="rank"><span>3</span></div>
+                <div class="name">
+                    <h4>To view the stats for current year batters.</h4>
+                    <a href="batter_card.html">
+                        <p>Click Here</p>
+                    </a>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="rank"><span>4</span></div>
+                <div class="name">
+                    <h4>To view the stats for current year bowlers.</h4>
+                    <a href="bowler_card.html">
+                        <p>Click Here</p>
+                    </a>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="rank"><span>5</span></div>
+                <div class="name">
+                    <h4>In order to navigate to Help Page.</h4>
+                    <a href="help.html">
+                        <p>Click Here</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
