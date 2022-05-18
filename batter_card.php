@@ -154,9 +154,9 @@
 <?php include("navbar.php"); ?>
     <div class="info">
         <h1>Batters According To Their Ratings</h1>
-        <p>
+        <!-- <p>
             Some other information.
-        </p>
+        </p> -->
     </div>
     <?php 
       
