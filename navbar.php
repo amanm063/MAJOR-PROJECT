@@ -8,10 +8,9 @@
 					<a href="batter_card.php" class="link mr-15 color-white">BATTERS</a>
 					<a href="bowler_card.php" class="link mx-15 color-white">BOWLERS</a>
 					<a href="teams.html" class="link mx-15 color-white">TEAMS</a>
-					<a href="#" class="link mx-15 color-white">NEWS</a>
+					<a href="all_players.html" class="link mx-15 color-white">PLAYERS</a>
 					<a href="about_us.html" class="link mx-15 color-white">ABOUT US</a>
-					<!-- <a href="card.html" class="link mx-15 color-white">PLAYERS</a> -->
-					<!-- <a href="#" class="link ml-15 color-white">OTHERS</a> -->
+					<a href="help.html" class="link mx-15 color-white">HELP</a>
 				</div>
 				<div class="mt-10 mt-lg-0 col-lg-3 text-lg-right">
 					<a href="login.php" class="link mr-30 color-white">Login</a>

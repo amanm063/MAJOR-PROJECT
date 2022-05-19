@@ -283,13 +283,12 @@
 				</div>
 				<div class="col-xl-4 col-lg-9 order-2 order-xl-0 color-white">© NO RIGTHS</div>
 				<div class="mt-10 mb-10 my-xl-0 col-xl-6 text-xl-right links order-1 order-xl-0">
-					<a href="batter_card.html" class="link color-white mr-30">BATTERS</a>
-					<a href="bowler_card.html" class="link color-white mr-30">BOWLERS</a>
+					<a href="batter_card.php" class="link color-white mr-30">BATTERS</a>
+					<a href="bowler_card.php" class="link color-white mr-30">BOWLERS</a>
 					<a href="teams.html" class="link color-white mr-30">TEAMS</a>
-					<a href="#" class="link color-white mr-30">NEWS</a>
-					<!-- <a href="card.html" class="link color-white mr-30">PLAYERS</a> -->
-					<!-- <a href="#" class="link color-white mr-30">OTHERS</a> -->
+					<a href="all_players.html" class="link color-white mr-30">PLAYERS</a>
 					<a href="about_us.html" class="link color-white">ABOUT US</a>
+					<a href="help.html" class="link color-white">HELP</a>
 				</div>
 			</div>
 			<div class="mt-30 mb-40 hr h-2 bg-gray op-5">
