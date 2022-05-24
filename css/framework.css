@@ -682,6 +682,7 @@ input[type=radio] + label:before {
 }
 .logo.color-white {
   color: #ffffff;
+  text-decoration: none;
 }
 
 /* Navigation Mobile */

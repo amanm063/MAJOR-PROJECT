@@ -5,63 +5,245 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="icon" href="i/Logo.png" type="image/x-icon">
 
     <link
         href="https://fonts.googleapis.com/css?family=Oxygen:100,200,300,400,600,500,700,800,900|Source+Sans+Pro:100,200,300,400,500,600,700,800,900"
         rel="stylesheet">
 
     <title>Help Page</title>
+
     <style>
+        *::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: #161616;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #000;
+            border-radius: 10px;
+            border: 1px solid #ffffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Oxygen', sans-serif;
         }
 
         body {
-            background-color: black;
-            font-family: 'Oxygen', sans-serif;
-            width: 100vw;
-            height: 100vh;
-            overflow-x: hidden;
+            background-color: #161616;
+        }
+
+        .container1 {
+            /* width: 100%; */
+            /* height: 35vh; */
+            display: flex;
+            /* justify-content: center; */
+            /* align-items: center; */
+            background: #161616;
+            margin-bottom: 30px;
+        }
+
+        /* .container2 {
+            width: 10%;
+            height: 8px;
+            display: flex;
+            background: #161616;
+            margin-bottom: 30px;
+        }
+
+        .list2 {
+            position: relative;
+            width: 80px;
+            height: 30px;
+            padding: 10px;
+            background: #2f363e;
+            box-shadow: 25px 25px 75px rgba(31, 131, 242, 0.25),
+                10px 10px 70px rgba(31, 131, 242, 0.25),
+                inset 5px 5px 10px rgba(31, 131, 242, 0.5),
+                inset 5px 5px 20px rgba(31, 131, 242, 0.2),
+                inset -5px -5px 15px rgba(31, 131, 242, 0.75);
+            border-radius: 30px;
+        } */
+
+        .list {
+            position: relative;
+            width: 800px;
+            min-height: 300px;
+            padding: 50px;
+            background: #2f363e;
+            box-shadow: 25px 25px 75px rgba(31, 131, 242, 0.25),
+                10px 10px 70px rgba(31, 131, 242, 0.25),
+                inset 5px 5px 10px rgba(31, 131, 242, 0.5),
+                inset 5px 5px 20px rgba(31, 131, 242, 0.2),
+                inset -5px -5px 15px rgba(31, 131, 242, 0.75);
+            border-radius: 30px;
+        }
+
+        .wh {
+            box-shadow: 25px 25px 75px rgba(255, 255, 255, 0.25),
+                10px 10px 70px rgba(255, 255, 255, 0.25),
+                inset 5px 5px 10px rgba(255, 255, 255, 0.50),
+                inset 5px 5px 20px rgba(255, 255, 255, 0.20),
+                inset -5px -5px 15px rgba(255, 255, 255, 0.75);
+        }
+
+        .rd {
+            box-shadow: 25px 25px 75px rgba(228, 23, 23, 0.25),
+                10px 10px 70px rgba(228, 23, 23, 0.25),
+                inset 5px 5px 10px rgba(228, 23, 23, 0.50),
+                inset 5px 5px 20px rgba(228, 23, 23, 0.20),
+                inset -5px -5px 15px rgba(228, 23, 23, 0.75);
+        }
+
+        .list h3 {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .list-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+
+        .list-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 45px;
+            height: 45px;
+            background: #1f83f2;
+            border-radius: 22.5px;
+            box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+            transition: 0.5s;
+        }
+
+        /* .list-item:hover::before {
+            width: 100%;
+        } */
+
+        .list-item .rank {
+            position: relative;
+            min-width: 45px;
+            height: 45px;
+            display: flex;
             justify-content: center;
             align-items: center;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .list-item .rank::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: #2f363e;
+            border-radius: 30px;
+            transform: scale(0);
+            transition: 0.5s;
+        }
+
+        /* .list-item:hover .rank::before {
+            transform: scale(1);
+        } */
+
+        .list-item .rank span {
+            position: relative;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .list-item .name {
+            position: relative;
+            line-height: 1.15rem;
+        }
+
+        .list-item .name h4 {
+            font-weight: 600;
+            color: #bcbcc0;
+            transition: 0.5s;
+            line-height: normal;
+        }
+
+        .list-item .name p {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #95999d;
+            transition: 0.5s;
+        }
+
+        .list-item:hover .name h4,
+        .list-item:hover .name p {
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none;
         }
 
         .container {
-            height: 450px;
-            width: 900px;
+            height: 470px;
+            width: 75%;
             margin: 50px auto;
             /* border: 1px solid red; */
             position: relative;
         }
 
+        img {
+            height: 370px;
+            width: 720px;
+            margin: auto;
+            position: absolute;
+            top: 8%;
+            bottom: 8%;
+            left: 2%;
+            border-radius: 20px;
+        }
+
         .left {
-            background-color: blue;
             height: 400px;
-            width: 450px;
+            width: 750px;
             position: absolute;
         }
 
         .right {
-            background-color: beige;
             height: 400px;
             width: 450px;
-            right: 0px;
-            bottom: 0px;
             position: absolute;
+            right: 0px;
+            bottom: -30px;
+            border-radius: 30px;
         }
 
-        .right p {
-            margin: 6%;
-        }
-
-        img {
+        .info {
             text-align: center;
-            background-size: cover;
-            height: 400px;
-            width: 450px;
+            margin: auto;
+            width: 100%;
+            background-color: #161616;
+            color: white;
+        }
+
+        .info h1 {
+            font-size: 36px;
+        }
+
+        p {
+            color: white;
         }
     </style>
 </head>
@@ -69,43 +251,132 @@
 <body>
 
     <div class="container">
-        <div class="left">
-            <img src="i/dude.jpg" alt="Picture">
+        <div class="container1 left">
+            <div class="list">
+                <img src="i/rating.gif" alt="" style="padding:20px; background-color: white;">
+            </div>
         </div>
-        <div class="right">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta provident laborum reprehenderit
-                maiores
-                dignissimos dolorem voluptate hic quibusdam sit nisi.
-            </p>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="left">
-            <img src="i/dude.jpg" alt="Picture">
-        </div>
-        <div class="right">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta provident laborum reprehenderit
-                maiores
-                dignissimos dolorem voluptate hic quibusdam sit nisi.
-            </p>
+        <div class="container1 right">
+            <div class="list">
+                <h3>How Do We Calculate Our Rating?</h3>
+                <div class="list-item">
+                    <div class="rank"></div>
+                    <div class="name">
+                        <h4>We compared each and every player to the category best with different parameters being
+                            Strike Rate, Runs, Sixes & Fours (for batter) and Number of Balls, Extra Runs and Runs
+                            Conceived (for bowler) and then taking the player's mean in respective category.
+                        </h4>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+
     <div class="container">
-        <div class="left">
-            <img src="i/dude.jpg" alt="Picture">
+        <div class="container1 left">
+            <div class="list wh">
+                <img src="i/batter_bg.png" alt="">
+            </div>
         </div>
-        <div class="right">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta provident laborum reprehenderit
-                maiores
-                dignissimos dolorem voluptate hic quibusdam sit nisi.
-            </p>
+
+        <div class="container1 right">
+            <div class="list wh">
+                <h3>How to read batter's graph.</h3>
+                <div class="list-item">
+                    <div class="rank"><span>1</span></div>
+                    <div class="name">
+                        <h4>Top left graph shows the diff values of parameters we selected to calculate the rating of
+                            the player.</h4>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="rank"><span>2</span></div>
+                    <div class="name">
+                        <h4>Top right shows the individual rating in each category.</h4>
+                        <!-- <a href="teams.html">
+                            <p>Click Here</p>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="rank"><span>3</span></div>
+                    <div class="name">
+                        <h4>Bottom Left shows the total number of balls and runs by the batter.</h4>
+                        <!-- <a href="batter_card.html">
+                            <p>Click Here</p>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="rank"><span>4</span></div>
+                    <div class="name">
+                        <h4>Bottom Right shows the average rating across all fields.</h4>
+                        <!-- <a href="batter_card.html">
+                            <p>Click Here</p>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+
+    <div class="container">
+        <div class="container1 left">
+            <div class="list rd">
+                <img src="i/bowler_bg.png" alt="">
+            </div>
+        </div>
+
+        <div class="container1 right">
+            <div class="list rd">
+                <h3>How to read bowler's graph.</h3>
+                <div class="list-item">
+                    <div class="rank"><span>1</span></div>
+                    <div class="name">
+                        <h4>Top left graph shows the diff values of parameters we selected to calculate the rating of
+                            the player.</h4>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="rank"><span>2</span></div>
+                    <div class="name">
+                        <h4>Top right shows the individual rating in each category.</h4>
+                        <!-- <a href="teams.html">
+                            <p>Click Here</p>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="rank"><span>3</span></div>
+                    <div class="name">
+                        <h4>Bottom Left shows the total number of balls, extra runs and runs conceived by the bowler.
+                        </h4>
+                        <!-- <a href="batter_card.html">
+                            <p>Click Here</p>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="rank"><span>4</span></div>
+                    <div class="name">
+                        <h4>Bottom Right shows the average rating across all fields.</h4>
+                        <!-- <a href="batter_card.html">
+                            <p>Click Here</p>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="container2">
+        <div class="list2 wh">
+            <h3>Help</h3>
+        </div>
+    </div> -->
 
 </body>
 

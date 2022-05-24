@@ -74,12 +74,14 @@
         .wrapper {
             display: grid;
             grid-template-columns: repeat(auto-fit, 1fr);
+            grid-row: 4;
             grid-template-rows: auto;
             grid-template-areas:
                 "menu menu menu"
                 ". card .";
             /* width: 100vw; */
-            margin: auto;
+            margin-left: 5%;
+            margin-right: 5%;
             height: 50vh;
             padding-top: 40px;
             padding-bottom: 40px;
@@ -139,7 +141,7 @@
             display: block;
             width: 100%;
             max-width: 250px;
-            height: 370px;
+            height: 400px;
             font-size: var(--fontOrigin);
             border-radius: 8px;
             box-shadow: 0 16px 60px rgba(255, 255, 255, 0.3);
@@ -262,8 +264,8 @@
             height: 100%;
             object-fit: cover;
             object-position: 50% 50%;
-            -webkit-filter: grayscale(50%) contrast(75%) brightness(1.3);
-            filter: grayscale(50%) contrast(75%) brightness(1.3);
+            /* -webkit-filter: grayscale(50%) contrast(75%) brightness(1.3);
+            filter: grayscale(50%) contrast(75%) brightness(1.3); */
             -webkit-transition: all var(--speed) ease;
             transition: all var(--speed) ease;
             mix-blend-mode: normal;
@@ -328,7 +330,7 @@
             transform: translateY(30%);
             display: block;
             margin: 22px 0 16px 0;
-            font-size: var(--fontMedium);
+            font-size: var(--fontLarge);
             font-weight: var(--fontBold);
             /*text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.35);*/
             color: rgba(255, 255, 255, 0.65);
@@ -367,11 +369,19 @@
             display: inline-block;
             align-self: left;
             justify-self: left;
+            width: 30px;
             font-size: var(--fontSmall);
             font-weight: var(--fontLight);
             text-transform: uppercase;
             text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.45);
-            color: rgba(250, 250, 250, 0.4);
+            color: white;
+        }
+
+        .card__date a {
+            /* background-color: black; */
+            color: white;
+            font-size: 15px;
+            margin-bottom: 5px;
         }
 
         /* MODIFIERS */
@@ -446,6 +456,114 @@
             </div>
             <div class="card__footer">
                 <p class="card__date"><a href="batter_profile_page.php">View More</a></p>
+                <p class=""></p>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper">
+
+        <div class="card" data-effect="zoom">
+            <button class="card__save  js-save" type="button">
+            </button>
+            <figure class="card__image">
+                <img src="https://img.etimg.com/thumb/msid-74589777,width-1200,height-900,imgsize-1222000,overlay-economictimes/photo.jpg"
+                    alt="Short description">
+            </figure>
+            <div class="card__header">
+                <figure class="card__profile">
+                    <img src="i/p/1.jpg" alt="Short description">
+                </figure>
+            </div>
+            <div class="card__body">
+                <h3 class="card__name">Virat Kohli</h3>
+                <!-- <p class="card__job">astronaut & engineer</p> -->
+                <p class="card__bio">
+                    Rating:
+                </p>
+            </div>
+            <div class="card__footer">
+                <p class="card__date"><a href="batter_profile_page.php">View Stats</a></p>
+                <p class=""></p>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper">
+
+        <div class="card" data-effect="zoom">
+            <button class="card__save  js-save" type="button">
+            </button>
+            <figure class="card__image">
+                <img src="https://img.etimg.com/thumb/msid-74589777,width-1200,height-900,imgsize-1222000,overlay-economictimes/photo.jpg"
+                    alt="Short description">
+            </figure>
+            <div class="card__header">
+                <figure class="card__profile">
+                    <img src="i/p/1.jpg" alt="Short description">
+                </figure>
+            </div>
+            <div class="card__body">
+                <h3 class="card__name">Virat Kohli</h3>
+                <!-- <p class="card__job">astronaut & engineer</p> -->
+                <p class="card__bio">
+                    Rating:
+                </p>
+            </div>
+            <div class="card__footer">
+                <p class="card__date"><a href="batter_profile_page.php">View Stats</a></p>
+                <p class=""></p>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper">
+
+        <div class="card" data-effect="zoom">
+            <button class="card__save  js-save" type="button">
+            </button>
+            <figure class="card__image">
+                <img src="https://img.etimg.com/thumb/msid-74589777,width-1200,height-900,imgsize-1222000,overlay-economictimes/photo.jpg"
+                    alt="Short description">
+            </figure>
+            <div class="card__header">
+                <figure class="card__profile">
+                    <img src="i/p/1.jpg" alt="Short description">
+                </figure>
+            </div>
+            <div class="card__body">
+                <h3 class="card__name">Virat Kohli</h3>
+                <!-- <p class="card__job">astronaut & engineer</p> -->
+                <p class="card__bio">
+                    Rating:
+                </p>
+            </div>
+            <div class="card__footer">
+                <p class="card__date"><a href="batter_profile_page.php">View Stats</a></p>
+                <p class=""></p>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper">
+
+        <div class="card" data-effect="zoom">
+            <button class="card__save  js-save" type="button">
+            </button>
+            <figure class="card__image">
+                <img src="https://img.etimg.com/thumb/msid-74589777,width-1200,height-900,imgsize-1222000,overlay-economictimes/photo.jpg"
+                    alt="Short description">
+            </figure>
+            <div class="card__header">
+                <figure class="card__profile">
+                    <img src="i/p/1.jpg" alt="Short description">
+                </figure>
+            </div>
+            <div class="card__body">
+                <h3 class="card__name">Virat Kohli</h3>
+                <!-- <p class="card__job">astronaut & engineer</p> -->
+                <p class="card__bio">
+                    Rating:
+                </p>
+            </div>
+            <div class="card__footer">
+                <p class="card__date"><a href="batter_profile_page.php">View Stats</a></p>
                 <p class=""></p>
             </div>
         </div>

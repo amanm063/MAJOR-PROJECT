@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            width: 100%;
+            z-index: 999;
+            padding: .4rem;
+            position: fixed;
+            background: #161616;
+            border-bottom: 0.1rem solid #d1d1d1;
+            color: white;
+        }
+
+        header input.menu-toggle {
+            display: none;
+        }
+
+        nav {
+            position: absolute;
+            text-align: center;
+            top: 100%;
+            left: 0;
+            background-color: #f4f5f6;
+            width: 100%;
+            -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+            -webkit-transition: -webkit-transform 400ms ease-in-out;
+            transition: -webkit-transform 400ms ease-in-out;
+            transition: transform 400ms ease-in-out;
+            transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+            -webkit-transform-origin: top;
+            transform-origin: top;
+        }
+
+        nav ul {
+            margin: 0;
+            margin-top: 14%;
+            padding: 0;
+            height: 90vh;
+        }
+
+        nav li {
+            margin-left: 1rem;
+            height: 10%;
+            list-style: none;
+        }
+
+        nav a {
+            text-transform: uppercase;
+            opacity: 0;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-heading {
+            font-size: 2.5rem;
+            margin: auto;
+            padding: auto;
+        }
+
+        .menu-toggle:checked~nav {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+        }
+
+        .menu-toggle:checked~nav a {
+            opacity: 1;
+            -webkit-transition: opacity 200ms ease-in 100ms;
+            transition: opacity 200ms ease-in 100ms;
+        }
+
+        .menu-nav-toggle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-right: 2rem;
+        }
+
+        .menu-nav-toggle:hover,
+        .menu-nav-toggle:focus {
+            cursor: pointer;
+        }
+
+        .menu-nav-toggle span,
+        .menu-nav-toggle span:before,
+        .menu-nav-toggle span:after {
+            display: block;
+            background: #333;
+            width: 2rem;
+            border-radius: 0.125rem;
+            position: relative;
+            height: 0.25rem;
+        }
+
+        .menu-nav-toggle span:before,
+        .menu-nav-toggle span:after {
+            content: '';
+            position: absolute;
+        }
+
+        .menu-nav-toggle span:before {
+            top: 0.8rem;
+        }
+
+        .menu-nav-toggle span:after {
+            bottom: 0.8rem;
+        }
+
+        @media screen and (min-width: 50rem) {
+            .menu-nav-toggle {
+                display: none;
+            }
+
+            header {
+                display: -ms-grid;
+                display: grid;
+                -ms-grid-columns: 1fr auto minmax(37.5rem, 3fr) 1fr;
+                grid-template-columns: 1fr auto minmax(37.5rem, 3fr) 1fr;
+            }
+
+            .nav-brand {
+                -ms-grid-column: 2;
+                -ms-grid-column-span: 1;
+                grid-column: 2/3;
+            }
+
+            nav {
+                all: unset;
+                -ms-grid-column: 3;
+                -ms-grid-column-span: 1;
+                grid-column: 3/4;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            nav ul {
+                margin-top: 0;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                height: auto;
+            }
+
+            nav li {
+                margin-bottom: 0;
+                margin-left: 2rem;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                height: auto;
+            }
+
+            nav li {
+                margin-bottom: 0;
+                margin-left: 2rem;
+            }
+
+            nav a {
+                opacity: 1;
+            }
+        }
+
+        .dropbtn {
+            background-color: #161616;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #161616;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header id='header'>
+        <span class='nav-heading nav-brand'>DIMENSION XI </span>
+        <input type='checkbox' class='menu-toggle' id='menu-toggle'>
+        <nav class='header'>
+            <ul>
+                <div class="dropdown">
+                    <button class="dropbtn link mr-15 color-white">2008-2020</button>
+                    <div class="dropdown-content">
+                        <a href="#">PLAYERS</a>
+                        <a href="#">OTHER</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn link mx-15 color-white">2021</button>
+                    <div class="dropdown-content">
+                        <a href="#">BATTER</a>
+                        <a href="#">BOWLER</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn link mx-15 color-white">2022</button>
+                    <div class="dropdown-content">
+                        <a href="#">BATTER</a>
+                        <a href="#">BOWLER</a>
+                    </div>
+                </div>
+                <li>
+                    <a href='#!'>Team <a>
+                </li>
+                <li class='nav-header'>
+                    <a href='#!'>Help <a>
+
+                </li>
+                <li>
+                    <a href='#!'>About us <a>
+                </li>
+
+            </ul>
+        </nav>
+        <label for='menu-toggle' class='menu-nav-toggle'>
+            <span> </span>
+        </label>
+
+
+    </header>
+
+</body>
+
+</html>
