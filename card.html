@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="i/Logo.png" type="image/x-icon">
+    <title>Batter Cards</title>
     <style>
         /* GLOBAL VARIABLES */
         :root {
@@ -59,6 +60,7 @@
             font-family: var(--font);
             font-weight: var(--fontOrigin);
             background-color: #161616;
+            color: white;
             font-size: 1rem;
             line-height: 1.2;
             letter-spacing: 0.005rem;
@@ -78,7 +80,7 @@
                 ". card .";
             /* width: 100vw; */
             margin: auto;
-            min-height: 100vh;
+            height: 50vh;
             padding-top: 40px;
             padding-bottom: 40px;
         }
@@ -137,7 +139,7 @@
             display: block;
             width: 100%;
             max-width: 250px;
-            height: 400px;
+            height: 370px;
             font-size: var(--fontOrigin);
             border-radius: 8px;
             box-shadow: 0 16px 60px rgba(255, 255, 255, 0.3);
@@ -327,7 +329,7 @@
             display: block;
             margin: 22px 0 16px 0;
             font-size: var(--fontMedium);
-            font-weight: var(--fontLight);
+            font-weight: var(--fontBold);
             /*text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.35);*/
             color: rgba(255, 255, 255, 0.65);
             opacity: 0;
@@ -401,18 +403,30 @@
             filter: grayscale(50%) contrast(80%) brightness(1.6);
             mix-blend-mode: normal;
         }
+
+        .info {
+            text-align: center;
+            margin: auto;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgba(250, 250, 250, 0.4);
+        }
     </style>
 </head>
 
 <body>
 
+    <div class="info">
+        <h1>Batters According To Their Ratings</h1>
+    </div>
 
     <section class="wrapper">
 
-        <!-- BEGIN: card -->
         <div class="card" data-effect="zoom">
             <button class="card__save  js-save" type="button">
-                <i class="fa  fa-bookmark"></i>
             </button>
             <figure class="card__image">
                 <img src="https://img.etimg.com/thumb/msid-74589777,width-1200,height-900,imgsize-1222000,overlay-economictimes/photo.jpg"
@@ -424,23 +438,22 @@
                 </figure>
             </div>
             <div class="card__body">
-                <h3 class="card__name">Neil Armstrong</h3>
+                <h3 class="card__name">Virat Kohli</h3>
                 <!-- <p class="card__job">astronaut & engineer</p> -->
-                <p class="card__bio"> American astronaut, engineer, and the first person to walk on the Moon.</p>
+                <p class="card__bio">
+                    Rating:
+                </p>
             </div>
             <div class="card__footer">
-                <p class="card__date">Feb 10 2018</p>
+                <p class="card__date"><a href="batter_profile_page.php">View More</a></p>
                 <p class=""></p>
             </div>
         </div>
-        <!-- END: card -->
     </section>
     <section class="wrapper">
 
-        <!-- BEGIN: card -->
         <div class="card" data-effect="zoom">
             <button class="card__save  js-save" type="button">
-                <i class="fa  fa-bookmark"></i>
             </button>
             <figure class="card__image">
                 <img src="https://img.etimg.com/thumb/msid-74589777,width-1200,height-900,imgsize-1222000,overlay-economictimes/photo.jpg"
@@ -452,23 +465,22 @@
                 </figure>
             </div>
             <div class="card__body">
-                <h3 class="card__name">Neil Armstrong</h3>
+                <h3 class="card__name">Virat Kohli</h3>
                 <!-- <p class="card__job">astronaut & engineer</p> -->
-                <p class="card__bio"> American astronaut, engineer, and the first person to walk on the Moon.</p>
+                <p class="card__bio">
+                    Rating:
+                </p>
             </div>
             <div class="card__footer">
-                <p class="card__date">Feb 10 2018</p>
+                <p class="card__date"><a href="batter_profile_page.php">View More</a></p>
                 <p class=""></p>
             </div>
         </div>
-        <!-- END: card -->
     </section>
     <section class="wrapper">
 
-        <!-- BEGIN: card -->
         <div class="card" data-effect="zoom">
             <button class="card__save  js-save" type="button">
-                <i class="fa  fa-bookmark"></i>
             </button>
             <figure class="card__image">
                 <img src="https://img.etimg.com/thumb/msid-74589777,width-1200,height-900,imgsize-1222000,overlay-economictimes/photo.jpg"
@@ -480,23 +492,22 @@
                 </figure>
             </div>
             <div class="card__body">
-                <h3 class="card__name">Neil Armstrong</h3>
+                <h3 class="card__name">Virat Kohli</h3>
                 <!-- <p class="card__job">astronaut & engineer</p> -->
-                <p class="card__bio"> American astronaut, engineer, and the first person to walk on the Moon.</p>
+                <p class="card__bio">
+                    Rating:
+                </p>
             </div>
             <div class="card__footer">
-                <p class="card__date">Feb 10 2018</p>
+                <p class="card__date"><a href="batter_profile_page.php">View More</a></p>
                 <p class=""></p>
             </div>
         </div>
-        <!-- END: card -->
     </section>
     <section class="wrapper">
 
-        <!-- BEGIN: card -->
         <div class="card" data-effect="zoom">
             <button class="card__save  js-save" type="button">
-                <i class="fa  fa-bookmark"></i>
             </button>
             <figure class="card__image">
                 <img src="https://img.etimg.com/thumb/msid-74589777,width-1200,height-900,imgsize-1222000,overlay-economictimes/photo.jpg"
@@ -508,16 +519,17 @@
                 </figure>
             </div>
             <div class="card__body">
-                <h3 class="card__name">Neil Armstrong</h3>
-                <p class="card__job">astronaut & engineer</p>
-                <p class="card__bio"> American astronaut, engineer, and the first person to walk on the Moon.</p>
+                <h3 class="card__name">Virat Kohli</h3>
+                <!-- <p class="card__job">astronaut & engineer</p> -->
+                <p class="card__bio">
+                    Rating:
+                </p>
             </div>
             <div class="card__footer">
-                <p class="card__date">Feb 10 2018</p>
+                <p class="card__date"><a href="batter_profile_page.php">View More</a></p>
                 <p class=""></p>
             </div>
         </div>
-        <!-- END: card -->
     </section>
 
 

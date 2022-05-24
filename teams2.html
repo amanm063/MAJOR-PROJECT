@@ -11,6 +11,17 @@
         href="https://fonts.googleapis.com/css?family=Oxygen:100,200,300,400,600,500,700,800,900|Source+Sans+Pro:100,200,300,400,500,600,700,800,900"
         rel="stylesheet">
     <title>IPL Teams & Stats</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <style>
         *::-webkit-scrollbar {
             width: 8px;
@@ -40,7 +51,7 @@
             height: 200px;
             width: 450px;
             transform: translateX(10px) rotateY(25deg) rotateX(10deg);
-            background: rgba(249, 198, 26, 0.88);
+            background: rgba(250, 228, 36, 0.88);
             display: flex;
             justify-content: space-evenly;
             align-items: center;
@@ -61,6 +72,42 @@
             display: inline-block;
             transform: translate(-1px, 1px) scale(0.75);
             transform-origin: right center;
+        }
+
+        .c2 {
+            background: rgba(130, 108, 255, 0.88);
+        }
+
+        .c3 {
+            background: rgba(218, 72, 72, 0.88);
+        }
+
+        .c4 {
+            background: rgba(255, 137, 59, 0.88);
+        }
+
+        .c5 {
+            background: rgba(250, 0, 0, 0.692);
+        }
+
+        .c6 {
+            background: rgba(4, 113, 255, 0.705);
+        }
+
+        .c7 {
+            background: rgba(239, 27, 247, 0.88);
+        }
+
+        .c8 {
+            background: rgba(10, 36, 70, 0.88);
+        }
+
+        .c9 {
+            background: rgba(78, 16, 94, 0.88);
+        }
+
+        .c10 {
+            background: rgba(0, 217, 255, 0.88);
         }
 
         .wrapper:before {
@@ -131,10 +178,137 @@
             text-align: center;
             transition: 0.3s ease-out;
         }
+
+        .tableau {
+            width: 95%;
+            margin: auto;
+        }
+
+
+        .search-box {
+            position: absolute;
+            /* top: 50%; */
+            /* left: 100%; */
+            display: flex;
+            align-items: center;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            border-radius: 40px;
+            height: 34px;
+            background: #2f3640;
+        }
+
+        .search-box:hover .search-txt {
+            width: 130px;
+            padding: 0 6px;
+        }
+
+        .search-box:hover .search-btn {
+            background: #fff;
+        }
+
+        .search-txt {
+            border: none;
+            background: none;
+            outline: none;
+            padding: 0;
+            color: #fff;
+            transition: 0.5s;
+            font-size: 1rem;
+            width: 0px;
+        }
+
+        .search-btn {
+            color: #1abc9c;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: 0.5s;
+        }
+
+
+        .dropbtn {
+            background-color: #161616;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #161616;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
 </head>
 
 <body>
+
+    <nav class="pt-30 pb-30 bg-dark lh-40 text-center navigation_8">
+        <div class="container px-xl-0">
+            <div class="row align-items-center">
+                <div class="col-lg-3 text-lg-left">
+                    <a href="index.html" class="link logo color-white">DIMENSION XI</a>
+                </div>
+                <div class="col-lg-9">
+                    <div class="dropdown">
+                        <button class="dropbtn link mr-15 color-white">2008-2020</button>
+                        <div class="dropdown-content">
+                            <a href="#">PLAYERS</a>
+                            <a href="#">OTHER</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn link mx-15 color-white">2021</button>
+                        <div class="dropdown-content">
+                            <a href="#">BATTER</a>
+                            <a href="#">BOWLER</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn link mx-15 color-white">2022</button>
+                        <div class="dropdown-content">
+                            <a href="#">BATTER</a>
+                            <a href="#">BOWLER</a>
+                        </div>
+                    </div>
+                    <!-- <a href="batter_card.html" class="link mr-15 color-white">2008-2020</a> -->
+                    <!-- <a href="bowler_card.html" class="link mx-15 color-white">2021</a> -->
+                    <!-- <a href="all_players.html" class="link mx-15 color-white">2022</a> -->
+                    <a href="teams.html" class="link mx-15 color-white">TEAMS</a>
+                    <a href="about_us.html" class="link mx-15 color-white">ABOUT US</a>
+                    <a href="help.html" class="link mx-15 color-white">HELP</a>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+
     <div class="info">
         <h1>ALL IPL TEAMS FOR THIS SEASON</h1>
     </div>
@@ -146,53 +320,53 @@
     </div>
 
     <div class="wrapper">
-        <div class="card">
+        <div class="card c2">
             <img src="i/delhi.png" alt="">
         </div>
     </div>
 
     <div class="wrapper">
-        <div class="card">
-            <img src="i/mumbai.png" alt="">
+        <div class="card c3">
+            <img src="i/punjab.png" alt="">
         </div>
     </div>
     <div class="wrapper">
-        <div class="card">
+        <div class="card c4">
             <img src="i/hyderabad.png" alt="">
         </div>
     </div>
 
     <div class="wrapper">
-        <div class="card">
+        <div class="card c5">
             <img src="i/bangalore.png" alt="">
         </div>
     </div>
 
     <div class="wrapper">
-        <div class="card">
-            <img src="i/punjab.png" alt="">
+        <div class="card c6">
+            <img src="i/mumbai.png" alt="">
         </div>
     </div>
     <div class="wrapper">
-        <div class="card">
+        <div class="card c7">
             <img src="i/rajasthan.png" alt="">
         </div>
     </div>
 
     <div class="wrapper">
-        <div class="card">
+        <div class="card c8">
             <img src="i/gujrat.png" alt="">
         </div>
     </div>
 
     <div class="wrapper">
-        <div class="card">
+        <div class="card c9">
             <img src="i/kolkata.png" alt="">
         </div>
     </div>
 
     <div class="wrapper">
-        <div class="card">
+        <div class="card c10">
             <img src="i/lucknow.png" alt="">
         </div>
     </div>
@@ -225,6 +399,20 @@
     <script
         type='text/javascript'>                    var divElement = document.getElementById('viz1652114860290'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
+
+
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDP6Ex5S03nvKZJZSvGXsEAi3X_tFkua4U"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
 </body>
 
