@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="i/Logo.png" type="image/x-icon">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Oxygen:100,200,300,400,600,500,700,800,900|Source+Sans+Pro:100,200,300,400,500,600,700,800,900"
+        rel="stylesheet">
+    <title>IPL Teams & Stats</title>
+    <style>
+        *::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: #161616;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #000;
+            border-radius: 10px;
+            border: 1px solid #ffffff;
+        }
+
+        .wrapper {
+            position: relative;
+            perspective: 40em;
+            display: grid;
+            transform-style: preserve-3d;
+            margin: 120px 50px 100px 60px;
+            /* justify-content: space-around; */
+        }
+
+        .card {
+            grid-area: 1 / 1;
+            height: 200px;
+            width: 450px;
+            transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+            background: rgba(249, 198, 26, 0.88);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 30px;
+            color: #000;
+            text-transform: uppercase;
+            font-size: 60px;
+            font-weight: 900;
+            backface-visibility: hidden;
+            box-shadow: 0 10px 30px -3px rgba(0, 0, 0, .1);
+        }
+
+        .card .enclosed {
+            background: #000;
+            line-height: 1;
+            color: rgba(249, 198, 26, 1);
+            padding: 0 5px;
+            display: inline-block;
+            transform: translate(-1px, 1px) scale(0.75);
+            transform-origin: right center;
+        }
+
+        .wrapper:before {
+            --bw: 9px;
+            grid-area: 1 / 1;
+            content: '';
+            backface-visibility: hidden;
+            height: 100%;
+            width: 100%;
+            margin-top: calc(-1 * var(--bw));
+            margin-left: calc(-1 * var(--bw));
+            background: transparent;
+            transform: translateX(-60px) rotateY(-30deg) rotateX(15deg) scale(1.03);
+            pointer-events: none;
+            border: var(--bw) solid rgb(255, 255, 255);
+            box-sizing: content-box;
+        }
+
+
+        .wrapper:hover>div,
+        .wrapper:hover:before {
+            transform: none;
+        }
+
+
+        .wrapper>div,
+        .wrapper:before {
+            will-change: transform;
+            transition: .3s transform cubic-bezier(.25, .46, .45, 1);
+        }
+
+        img {
+            height: 260px;
+            width: 270px;
+            margin: 5px auto;
+        }
+
+
+        html,
+        body {
+            height: 100%;
+            color: whitesmoke;
+            font-family: 'Oxygen', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: row;
+            /* row-gap: 190px; */
+            flex-wrap: wrap;
+            place-items: center;
+            background: #161616;
+        }
+
+        .info {
+            text-align: center;
+            margin: auto;
+            width: 100%;
+        }
+
+        .text {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            place-items: end;
+            justify-content: center;
+            font-size: 1em;
+            text-align: center;
+            transition: 0.3s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info">
+        <h1>ALL IPL TEAMS FOR THIS SEASON</h1>
+    </div>
+
+    <div class="wrapper">
+        <div class="card">
+            <img src="i/chennai.png" alt="">
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="card">
+            <img src="i/delhi.png" alt="">
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="card">
+            <img src="i/mumbai.png" alt="">
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="card">
+            <img src="i/hyderabad.png" alt="">
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="card">
+            <img src="i/bangalore.png" alt="">
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="card">
+            <img src="i/punjab.png" alt="">
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="card">
+            <img src="i/rajasthan.png" alt="">
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="card">
+            <img src="i/gujrat.png" alt="">
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="card">
+            <img src="i/kolkata.png" alt="">
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="card">
+            <img src="i/lucknow.png" alt="">
+        </div>
+    </div>
+
+    <div class="info">
+        <h1>Team Stats</h1>
+    </div>
+
+    <div class="tableau">
+        <div class='tableauPlaceholder' id='viz1652114860290' style='position: relative'><noscript><a href='#'><img
+                        alt='Sheet 1 '
+                        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;IP&#47;IPLTEAMS&#47;Sheet1&#47;1_rss.png'
+                        style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='IPLTEAMS&#47;Sheet1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image'
+                    value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;IP&#47;IPLTEAMS&#47;Sheet1&#47;1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+            </object></div>
+    </div>
+    <script
+        type='text/javascript'>                    var divElement = document.getElementById('viz1652114860290'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+</body>
+
+</html>
